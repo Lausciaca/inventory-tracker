@@ -1,10 +1,15 @@
 const express = require('express');
+const crearProducto = require('../controller/productCtrl');
 const router = express.Router();
-const path = require('path');
 
 router.get('/', (req, res) => {
     console.log('/')
     res.render('index')
+})
+router.post('/', (req, res) => {
+    crearProducto(req.body)
+    
+    res.redirect('/') 
 })
 
 module.exports = router
