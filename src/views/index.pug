@@ -5,31 +5,9 @@ html
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous") 
         link(rel='stylesheet' type='text/css' href='styles/index.css')
     body
-    form(action="/" method="POST" class="w-3")
-        div(class="mb-3")
-            label(for="name" class="form-label") Nombre del producto
-            input(type="text" class="form-control" name="nombre" required)
-        div(class="mb-3")
-            label(for="cantidad" class="form-label") Cantidad
-            input(type="number" class="form-control" name="cantidad" required)
-        div(class="mb-3")
-            label(for="fecha_compra" class="form-label") Fecha compra
-            input(type="date" class="form-control" name="fecha_compra" required)
-        div(class="mb-3")
-            label(for="fecha_venta" class="form-label") Fecha llegada
-            input(type="date" class="form-control" name="fecha_llegada" required)
-        div(class="mb-3")
-            label(for="precio_compra" class="form-label") Precio compra U
-            input(type="number" class="form-control" name="precio_compra" required)
-        div(class="mb-3")
-            label(for="precio_venta" class="form-label") Precio venta U
-            input(type="numbre" class="form-control" name="precio_venta" required)
-        div(class="mb-3")
-            label(for="distribuidor" class="form-label") Distribuidor
-            input(type="text" class="form-control" name="distribuidor" required)
-
-
-        
-        <button type="submit" class="btn btn-primary">Submit</button>
-    form
+        div(class="div")
+            include index/form_add.pug
+            include index/form_remove.pug
+        div 
+            include index/products_table.pug
         

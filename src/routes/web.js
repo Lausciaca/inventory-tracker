@@ -1,14 +1,16 @@
 const express = require('express');
 const crearProducto = require('../controller/productCtrl');
+const Product = require('../models/Product');
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     console.log('/')
-    res.render('index')
+    var color = 1
+    const products = await Product.find()
+    res.render('index', { products: products, color: color })
 })
-router.post('/', (req, res) => {
+router.post('/entrada', (req, res) => {
     crearProducto(req.body)
-    
     res.redirect('/') 
 })
 

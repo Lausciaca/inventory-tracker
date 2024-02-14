@@ -1,0 +1,30 @@
+table 
+    tr 
+        th Nombre
+        th Cantidad 
+        th Fecha compra 
+        th Fecha llegada 
+        th Precio compra u 
+        th Precio venta u 
+        th Distribuidor
+    each product in products
+        if color == 1
+            tr(class='impar')
+                td= product.name    
+                td= product.stock    
+                td= product.purchase_date.toDateString() 
+                td= product.arrival_date.toDateString()
+                td= product.purchase_price 
+                td= product.sale_price
+                td= product.stockist
+            - color = 0
+        else 
+            tr
+                td= product.name    
+                td= product.stock    
+                td= product.purchase_date.toDateString() 
+                td= product.arrival_date.toDateString()
+                td= product.purchase_price 
+                td= product.sale_price
+                td= product.stockist
+            - color = 1

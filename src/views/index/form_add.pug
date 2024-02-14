@@ -1,0 +1,24 @@
+form(action="/entrada" method="POST" class="")
+    h2 Entrada 
+    div(class="mb-1")
+        label(for="name" class="") Nombre del producto
+        input(type="text" class="" name="nombre" required)
+    div(class="mb-1")
+        label(for="cantidad" class="") Cantidad
+        input(type="number" class="" name="cantidad" required)
+    div(class="mb-1")
+        label(for="fecha_compra" class="") Fecha compra
+        input(type="date" class="" name="fecha_compra" required)
+    div(class="mb-1")
+        label(for="fecha_venta" class="") Fecha llegada
+        input(type="date" class="" name="fecha_llegada" required)
+    div(class="mb-1")
+        label(for="precio_compra" class="") Precio compra U
+        input(type="number" class="" name="precio_compra" required)
+    div(class="mb-1")
+        label(for="precio_venta" class="") Precio venta U
+        input(type="numbre" class="" name="precio_venta" required)
+    div(class="mb-3")
+        label(for="distribuidor" class="") Distribuidor
+        input(type="text" class="" name="distribuidor" required)
+    <button type="submit" class="">Enviar</button>
